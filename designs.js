@@ -23,6 +23,10 @@ function makeGrid(x,y) {
     }
     $("#pixel_canvas").append(build);
 
-
+    $("#pixel_canvas").on( 'click', 'td', function() {
+        $(this).css("background-color",color);
+    });
 };
+
+
 
