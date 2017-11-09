@@ -12,7 +12,8 @@ $( "form" ).submit(function(e) {
     e.preventDefault();
 });
 function makeGrid(x,y) {
-    let build = "";
+    $("#pixel_canvas tr").remove(); //clear content if exist.
+    let build;
     for(let $i=1;$i<=y;$i++) {
         build += "<tr>";
         for(let $j=1;$j<=x;$j++){
@@ -21,4 +22,7 @@ function makeGrid(x,y) {
         build += "</tr>";
     }
     $("#pixel_canvas").append(build);
+
+
 };
+
