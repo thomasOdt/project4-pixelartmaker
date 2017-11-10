@@ -11,12 +11,12 @@ $( "form" ).submit(function(e) {
     makeGrid(canvasWidth,canvasHeight);
     e.preventDefault();
 });
-function makeGrid(x,y) {
+function makeGrid(cells,rows) {
     $("#pixel_canvas tr").remove(); //clear content if exist.
     let build;
-    for(let $i=1;$i<=y;$i++) {
+    for(let $i=1;$i<=rows;$i++) {
         build += "<tr>";
-        for(let $j=1;$j<=x;$j++){
+        for(let $j=1;$j<=cells;$j++){
             build += "<td></td>";
         }
         build += "</tr>";
